@@ -13,6 +13,7 @@ fn get_table() -> Vec<Vec<char>> {
     }
     return table;
 }
+
 pub fn encrypt(plain_text: &str, key: &str) -> String {
     let table = get_table();
 
