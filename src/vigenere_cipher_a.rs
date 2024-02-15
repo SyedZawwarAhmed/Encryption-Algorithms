@@ -6,10 +6,8 @@ fn get_table() -> Vec<Vec<char>> {
         for j in 0..26 {
             let ascii_value: u8 = (j + i) % 26 + 65;
             row.push(ascii_value as char);
-            print!(" {}", ascii_value as char);
         }
         table.push(row);
-        println!();
     }
     return table;
 }
