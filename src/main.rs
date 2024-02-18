@@ -1,10 +1,10 @@
-mod vigenere_cipher_a;
+mod vernam_cipher;
 
-use vigenere_cipher_a::{decrypt, encrypt};
+use vernam_cipher::{decrypt, encrypt};
 
 fn main() {
-    const PLAIN_TEXT: &str = "ZAWWAR";
-    const KEY: &str = "LOCK";
+    const PLAIN_TEXT: &str = "HELLOWORLD";
+    const KEY: &str = "TEST";
     let cipher_text = encrypt(PLAIN_TEXT, KEY);
     let decipher_text = decrypt(&cipher_text, KEY);
     println!("Plain Text:- {}", PLAIN_TEXT);
