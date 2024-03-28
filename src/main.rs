@@ -1,10 +1,10 @@
-mod rail_fence_cipher;
+mod columnar_cipher;
 
-use rail_fence_cipher::{ decrypt, encrypt };
+use columnar_cipher::{ decrypt, encrypt };
 
 fn main() {
     const PLAIN_TEXT: &str = "Zawwar";
-    const KEY: i32 = 4;
+    const KEY: &str = "HACK";
     let cipher_text = encrypt(PLAIN_TEXT, KEY);
     let decipher_text = decrypt(&cipher_text, KEY);
     println!("Plain Text:- {}", PLAIN_TEXT);
